@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(242, 239, 239);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+  height: 30px;
+  width: 200px;
+  background-color: #f8dbd390;
+  padding-left: 5px;
+  font-family: 'Nunito Sans', sans-serif;
 }
+
+select {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #b1d1c7ae;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.expense-input {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #f3d2caae;
+}
+
+button {
+  height: 30px;
+  width: 50px;
+  border: 1px solid gray ;
+  border-radius: 5px;
+  align-self: center;
+  background-color: #b1d1c7ae;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.amount-date-inputs {
+  display: flex;
+  padding: 10px;
+  background-color: #f3d2caae;
+}
+
+.category-payment-inputs {
+  display: flex;
+  padding: 10px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  justify-content: space-between;
+  background-color: #f3d2caae;
+  box-shadow: 0px 2px 0px rgb(0, 0, 0, 0.1);
+}
+
+.expense-date {
+  padding-top: 2px;
+  margin-left: 25px;
+}
+
+.payment-method {
+  margin-left: 25px;
+  width: 204px;
+  height: 33px;
+}
+
+.expense-category {
+  width: 204px;
+  height: 33px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #b1d1c7ae;
+  margin-top: 0%;
+}
+
+h4 {
+  padding: 10px;
+  background-color: #f3d2caae;
+  margin-bottom: 0%;
+  margin-top: 3%;
+  /* display: flex;
+  justify-content: center; */
+}
+
