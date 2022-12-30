@@ -32,7 +32,14 @@ select {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.expense-input {
+.add-expense {
+  display: grid;  
+  grid-template-rows: 50px 50px 50px; 
+  grid-template-columns: auto auto;
+  align-items: center; 
+}
+
+.expense-name-input {
   display: flex;
   padding: 10px;
   justify-content: space-between;
@@ -44,7 +51,7 @@ button {
   width: 50px;
   border: 1px solid gray ;
   border-radius: 5px;
-  align-self: center;
+  /* align-self: center; */
   background-color: #b1d1c7ae;
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -81,6 +88,10 @@ button {
   height: 33px;
 }
 
+.add-expense {
+  justify-content: space-between;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -88,6 +99,8 @@ ul {
   padding: 10px;
   background-color: #b1d1c7ae;
   margin-top: 0%;
+  align-items: center;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
 
 h4 {
@@ -95,7 +108,19 @@ h4 {
   background-color: #f3d2caae;
   margin-bottom: 0%;
   margin-top: 3%;
-  /* display: flex;
-  justify-content: center; */
 }
 
+li{
+  /* min-width: 100px; */
+  display: flex;
+  justify-content: flex-start;
+  min-width: 100px;
+  padding-left: 30px;
+}
+/* .new-expense-div {
+  margin: 0px;
+}
+
+.expenses-list {
+  margin: 0px;
+} */

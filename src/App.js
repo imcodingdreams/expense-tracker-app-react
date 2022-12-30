@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from './components/Header';
-import { NewExpenseInput } from './components/NewExpenseInput';
-import { AmountDateInputs, CategoryPaymentInputs } from './components/Inputs';
 import './App.css';
 import { ExpensesListHeader } from './components/ExpensesListHeader';
-
+import { AddExpense } from './components/AddExpense';
+import { Expenses } from './components/Expenses';
 
 function App() {
   return (
-    <div className="App">
+    <main className="app">
       <Header />
-      <NewExpenseInput />
-      <AmountDateInputs />
-      <CategoryPaymentInputs />
+      <AddExpense />
       <ExpensesListHeader />
-    </div>
+      <Expenses />
+    </main>
   );
 }
 
