@@ -11,15 +11,10 @@ export const AddExpense = (props) => {
   
 const handleSubmit = (e) => {
   e.preventDefault();
-  // const expense = { expenseName, expenseAmount, expenseDate, expenseCategory, paymentMethod };
-  // console.log(expense)
-  // props.createNewExpense(expense);
+  const expense = { expenseName, expenseAmount, expenseDate, expenseCategory, paymentMethod };
+  console.log(expense)
+  props.createNewExpense(expense);
 }
-
-  // const handleClickSave = (e) => {
-  //   setExpenseName(e.target.value);
-  //   console.log ("Saved")
-  // }
   return (
     <form className="add-expense" onSubmit={handleSubmit}>
       <input 
@@ -32,8 +27,9 @@ const handleSubmit = (e) => {
         onChange={(e) => setExpenseName(e.target.value)}
         required
       /> 
+      
       <button className="save-button">Save</button>
-      {/* <button className="save-button" onClick={handleClickSave}>Save</button> */}
+    
       <input 
         type="number" 
         name="number" 

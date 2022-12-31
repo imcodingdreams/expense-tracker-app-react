@@ -9,7 +9,7 @@ function App() {
   return (
     <main className="app">
       <Header />
-      <AddExpense />
+      <AddExpense createNewExpense={} />
       <ExpensesListHeader />
       <Expenses />
     </main>

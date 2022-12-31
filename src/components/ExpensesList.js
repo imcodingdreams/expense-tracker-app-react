@@ -1,4 +1,5 @@
 import React from 'react'
+import { AddExpense } from './AddExpense'
 
 export const ExpensesList = ({expenses, handleClickDelete}) => {
   return (
