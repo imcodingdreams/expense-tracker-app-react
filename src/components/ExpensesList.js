@@ -1,7 +1,6 @@
 import React from 'react'
-import { AddExpense } from './AddExpense'
 
-export const ExpensesList = ({expenses, handleClickDelete}) => {
+export const ExpensesList = ({ expenses, handleClickDelete }) => {
   return (
     <div className='expenses-list'>
       {expenses.map(expense => (
@@ -12,7 +11,7 @@ export const ExpensesList = ({expenses, handleClickDelete}) => {
             <li>{expense.category}</li>
             <li>{expense.name}</li>
             <li>${expense.amount}</li>
-            <button onClick={() => handleClickDelete(expense.id)}>X</button>
+            <button type="button" className="btn btn-primary" onClick={() => handleClickDelete(expense.id)}>X</button>
           </ul>
         </div>
       ))}
