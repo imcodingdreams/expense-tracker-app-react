@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, expenseDateRef, expenseCategoryRef, expensePaymentMethodRef }) => {
 
@@ -8,16 +8,12 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
   const [expenseDate, setExpenseDate] = useState("");
   const [expenseCategory, setExpenseCategory] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const expense = { expenseName, expenseAmount, expenseDate, expenseCategory, paymentMethod };
-    //console.log(expense)
-    //props.createNewExpense(expense);
-
-
+    // const expense = { expenseName, expenseAmount, expenseDate, expenseCategory, paymentMethod };
   }
+
   return (
     <form className="add-expense" onSubmit={handleSubmit}>
       <input
@@ -31,11 +27,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
         onChange={(e) => setExpenseName(e.target.value)}
         required
       />
-
-      {/* <button className="save-button">Save</button> */}
       <button className="save-button" onClick={ handleClickSave}>Save</button>
-      {/* <button type="button" className="btn btn-primary">Save</button> */}
-
       <input
         type="number"
         ref={expenseAmountRef}
