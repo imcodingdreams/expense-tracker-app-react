@@ -1,18 +1,27 @@
 body {
+  background-color: rgb(242, 239, 239);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+button {
+  background-color: aqua;
+}
+
+/* body {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(242, 239, 239);
   font-family: 'Nunito Sans', sans-serif;
-}
+} */
 
-.header {
+/* .header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-input {
+/* input {
   border-top: none;
   border-left: none;
   border-right: none;
@@ -22,47 +31,46 @@ input {
   background-color: #f8dbd390;
   padding-left: 5px;
   font-family: 'Nunito Sans', sans-serif;
-}
+} */
 
-select {
+/* select {
   height: 30px;
   width: 200px;
   border-radius: 5px;
   background-color: #b1d1c7ae;
   font-family: 'Nunito Sans', sans-serif;
-}
+} */
 
-.add-expense {
+/* .add-expense {
   display: grid;  
   grid-template-rows: 50px 50px 50px; 
   grid-template-columns: auto auto;
   align-items: center; 
-}
+} */
 
-.expense-name-input {
+/* .expense-name-input {
   display: flex;
   padding: 10px;
   justify-content: space-between;
   background-color: #f3d2caae;
-}
+} */
 
-button {
+/* button {
   height: 30px;
   width: 50px;
   border: 1px solid gray ;
   border-radius: 5px;
-  /* align-self: center; */
   background-color: #b1d1c7ae;
   font-family: 'Nunito Sans', sans-serif;
-}
+} */
 
-.amount-date-inputs {
+/* .amount-date-inputs {
   display: flex;
   padding: 10px;
   background-color: #f3d2caae;
-}
+} */
 
-.category-payment-inputs {
+/* .category-payment-inputs {
   display: flex;
   padding: 10px;
   padding-bottom: 25px;
@@ -70,9 +78,9 @@ button {
   justify-content: space-between;
   background-color: #f3d2caae;
   box-shadow: 0px 2px 0px rgb(0, 0, 0, 0.1);
-}
+} */
 
-.expense-date {
+/* .expense-date {
   padding-top: 2px;
   margin-left: 25px;
 }
@@ -86,9 +94,9 @@ button {
 .expense-category {
   width: 204px;
   height: 33px;
-}
+} */
 
-.add-expense {
+/* .add-expense {
   justify-content: space-between;
 }
 
@@ -100,10 +108,9 @@ ul {
   background-color: #b1d1c7ae;
   margin-top: 0%;
   align-items: center;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
-}
+} */
 
-h4 {
+/* h4 {
   padding: 10px;
   background-color: #f3d2caae;
   margin-bottom: 0%;
@@ -111,16 +118,9 @@ h4 {
 }
 
 li{
-  /* min-width: 100px; */
   display: flex;
   justify-content: flex-start;
   min-width: 100px;
   padding-left: 30px;
-}
-/* .new-expense-div {
-  margin: 0px;
-}
-
-.expenses-list {
-  margin: 0px;
 } */
+

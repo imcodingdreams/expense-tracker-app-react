@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Header } from './components/Header';
 import './App.css';
-import { ExpensesListHeader } from './components/ExpensesListHeader';
+//import { ExpensesListHeader } from './components/ExpensesListHeader';
 import { AddExpense } from './components/AddExpense';
 import { ExpensesList } from './components/ExpensesList';
 import { v4 as uuid } from 'uuid';
@@ -17,15 +17,30 @@ function App() {
   const expenseCategoryRef = useRef();
   const expensePaymentMethodRef = useRef();
 
-  useEffect(() => {
-    const storedExpenses = JSON.parse(window.localStorage.getItem('LOCAL_STORAGE_KEY'))
-    if (storedExpenses) setExpenses(storedExpenses)
-    console.log(storedExpenses)
-  }, [])
+  const loadCount = useRef(0);
 
+  //fires at the beginning
   useEffect(() => {
-    window.localStorage.setItem('LOCAL_STORAGE_KEY', JSON.stringify(expenses))
-  }, [expenses])
+    const storedExpenses = JSON.parse(
+      localStorage.getItem('LOCAL_STORAGE_KEY')
+    );
+    if (storedExpenses) setExpenses(storedExpenses);
+    console.log(storedExpenses);
+  }, []);
+
+  //fires at the beginning
+  //fires any time expenses changes
+  useEffect(() => {
+    if (loadCount.current > 2) {
+      localStorage.setItem(
+        'LOCAL_STORAGE_KEY',
+        JSON.stringify(expenses)
+      );
+    }
+
+    loadCount.current++;
+  }, [expenses]);
+
 
   function handleClickSave() {
     let paymentMethod = expensePaymentMethodRef.current.value;
@@ -42,11 +57,11 @@ function App() {
         id: uuid(), paymentMethod: paymentMethod, date: date, category: category, name: name, amount: amount
       }]
     })
-    // paymentMethod = null;
-    // date = null;
-    // category = null;
-    // name = null;
-    // amount = null;
+    expensePaymentMethodRef.current.value = '';
+    expenseDateRef.current.value = '';
+    expenseCategoryRef.current.value = '';
+    expenseNameRef.current.value = '';
+    expenseAmountRef.current.value = '';
   }
 
   const handleClickDelete = (id) => {
@@ -62,7 +77,7 @@ function App() {
         expenseDateRef={expenseDateRef}
         expenseCategoryRef={expenseCategoryRef}
         expensePaymentMethodRef={expensePaymentMethodRef} />
-      <ExpensesListHeader />
+      {/* <ExpensesListHeader /> */}
       <ExpensesList expenses={expenses} handleClickDelete={handleClickDelete} />
     </main>
   );
