@@ -32,7 +32,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   name="expenseName"
                   //id="expenseName"
                   placeholder="Expense"
-                  required="true"
+                  //required="true"
                 />
               </Col>
               <Col xs={12} lg={4} className="col">
@@ -44,17 +44,17 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   step=".01"
                   placeholder="Amount"
                   //id="expenseAmount"
-                  required="true"
+                  //required="true"
                 />
               </Col>
               <Col xs={12} lg={4} className="col">
-                <FormControl controlid='form.Category' as='select'
+                <Form.Control controlid='form.Category' as='select'
                   ref={expenseCategoryRef}
                   name="expenseCategory"
                   //id="expenseCategory"
-                  required="true"
+                  //required="true"
                 >
-                  <option value="" disabled selected hidden>Category</option>
+                  <option value="" disabled  hidden>Category</option>
                   <option value="Food">Food</option>
                   <option value="Personal Care">Personal Care</option>
                   <option value="Medical">Medical</option>
@@ -70,7 +70,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   <option value="Pets">Pets</option>
                   <option value="Debt">Debt</option>
                   <option value="Other">Other</option>
-                </FormControl>
+                </Form.Control>
               </Col>
             </Row>
             <Row style={{ marginBottom: "40px" }}>
@@ -80,9 +80,9 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   name="payment"
                   //id="paymentMethod"
                   className="payment-method"
-                  required="true"
+                  //required="true"
                 >
-                  <option value="" disabled selected hidden>Payment Method</option>
+                  <option value="" disabled hidden>Payment Method</option>
                   <option value="Card">Card</option>
                   <option value="Cash">Cash</option>
                   <option value="Cryptocoin">Cryptocoin</option>
@@ -96,7 +96,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   name="expenseDate"
                   //id="expenseDate"
                   placeholder="Choose date"
-                  required="true"
+                  //required="true"
                 />
               </Col>
             </Row>
@@ -104,7 +104,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               <Col className="col">
                 <div className="d-flex justify-content-center">
                   <Button style={{
-                    height: "40px", width: "80px", textAlign: "center", background: "#AEBDCA", color: "#000", borderColor: "lightGray", justifyContent: "center"
+                    height: "40px", width: "80px", textAlign: "center", background: "#AEBDCA", color: "#000", borderColor: "lightGray", justifyContent: "center", 
                   }} onClick={handleClickSave}>Save</Button>
                 </div>
               </Col>
