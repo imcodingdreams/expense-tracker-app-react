@@ -1,22 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Header } from './components/Header';
 import './App.css';
-//import { ExpensesListHeader } from './components/ExpensesListHeader';
 import { AddExpense } from './components/AddExpense';
 import { ExpensesList } from './components/ExpensesList';
 import { v4 as uuid } from 'uuid';
 
-//const LOCAL_STORAGE_KEY = 'expenseApp.expenses';
-
 function App() {
   const [expenses, setExpenses] = useState([]);
-
   const expenseNameRef = useRef();
   const expenseAmountRef = useRef();
   const expenseDateRef = useRef();
   const expenseCategoryRef = useRef();
   const expensePaymentMethodRef = useRef();
-
   const loadCount = useRef(0);
 
   //fires at the beginning
@@ -37,10 +32,8 @@ function App() {
         JSON.stringify(expenses)
       );
     }
-
     loadCount.current++;
   }, [expenses]);
-
 
   function handleClickSave() {
     let paymentMethod = expensePaymentMethodRef.current.value;
@@ -48,8 +41,6 @@ function App() {
     let category = expenseCategoryRef.current.value;
     let name = expenseNameRef.current.value;
     let amount = expenseAmountRef.current.value;
-
-    console.log(`Saved: ${paymentMethod}, ${date}, ${category}, ${name}, ${amount}`)
 
     if (paymentMethod === '' || category === '' || name === '' || amount === '') return
     setExpenses(prevExpenses => {
@@ -77,7 +68,6 @@ function App() {
         expenseDateRef={expenseDateRef}
         expenseCategoryRef={expenseCategoryRef}
         expensePaymentMethodRef={expensePaymentMethodRef} />
-      {/* <ExpensesListHeader /> */}
       <ExpensesList expenses={expenses} handleClickDelete={handleClickDelete} />
     </main>
   );
