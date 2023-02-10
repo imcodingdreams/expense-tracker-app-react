@@ -25,7 +25,8 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
             <Row>
               <Col xs={12} lg={4} className="col">
                 <InputGroup>
-                  <FormControl className='mb-4'
+                  <FormControl
+                    className='mb-4'
                     type="input"
                     ref={expenseNameRef}
                     name="expenseName"
@@ -34,7 +35,8 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 </InputGroup>
               </Col>
               <Col xs={12} lg={4} className="col">
-                <FormControl className='mb-4'
+                <FormControl
+                  className='mb-4'
                   type="number"
                   ref={expenseAmountRef}
                   name="expenseAmount"
@@ -44,7 +46,8 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 />
               </Col>
               <Col xs={12} lg={4} className="col">
-                <FormControl className='mb-4'
+                <FormControl
+                  className='mb-4'
                   controlid='form.Category'
                   as='select'
                   ref={expenseCategoryRef}
@@ -69,7 +72,8 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 </FormControl>
               </Col>
               <Col xs={12} lg={6} className="col">
-                <FormControl className='mb-4'
+                <FormControl
+                  className='mb-4'
                   controlid='form.PaymentMethod'
                   as='select'
                   ref={expensePaymentMethodRef}
@@ -83,7 +87,8 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 </FormControl>
               </Col>
               <Col xs={12} lg={6} className="col">
-                <FormControl className='mb-5'
+                <FormControl
+                  className='mb-5'
                   type="date"
                   ref={expenseDateRef}
                   name="expenseDate"
