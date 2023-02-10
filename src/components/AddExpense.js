@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { Button, FormControl, Row, Col } from 'react-bootstrap';
+import { Button, FormControl, Row, Col, InputGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
+
 
 export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, expenseDateRef, expenseCategoryRef, expensePaymentMethodRef }) => {
 
@@ -21,17 +22,19 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
       <Row className="justify-content-center">
         <Col lg={8}>
           <Form onSubmit={handleSubmit}>
-            <Row style={{ marginBottom: "40px" }}>
+            <Row>
               <Col xs={12} lg={4} className="col">
-                <FormControl
-                  type="input"
-                  ref={expenseNameRef}
-                  name="expenseName"
-                  placeholder="Expense"
-                />
+                <InputGroup>
+                  <FormControl className='mb-4'
+                    type="input"
+                    ref={expenseNameRef}
+                    name="expenseName"
+                    placeholder="Expense"
+                  />
+                </InputGroup>
               </Col>
               <Col xs={12} lg={4} className="col">
-                <FormControl
+                <FormControl className='mb-4'
                   type="number"
                   ref={expenseAmountRef}
                   name="expenseAmount"
@@ -41,7 +44,9 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 />
               </Col>
               <Col xs={12} lg={4} className="col">
-                <FormControl controlid='form.Category' as='select'
+                <FormControl className='mb-4'
+                  controlid='form.Category'
+                  as='select'
                   ref={expenseCategoryRef}
                   name="expenseCategory"
                 >
@@ -63,13 +68,12 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                   <option value="Other">Other</option>
                 </FormControl>
               </Col>
-            </Row>
-            <Row style={{ marginBottom: "40px" }}>
               <Col xs={12} lg={6} className="col">
-                <FormControl controlid='form.PaymentMethod' as='select'
+                <FormControl className='mb-4'
+                  controlid='form.PaymentMethod'
+                  as='select'
                   ref={expensePaymentMethodRef}
-                  name="payment"
-                  className="payment-method"
+                  name="paymentMethod"
                 >
                   <option value="" disabled hidden>Payment Method</option>
                   <option value="Card">Card</option>
@@ -79,7 +83,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
                 </FormControl>
               </Col>
               <Col xs={12} lg={6} className="col">
-                <FormControl
+                <FormControl className='mb-5'
                   type="date"
                   ref={expenseDateRef}
                   name="expenseDate"
@@ -91,7 +95,13 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               <Col className="col">
                 <div className="d-flex justify-content-center">
                   <Button style={{
-                    height: "40px", width: "80px", textAlign: "center", background: "#AEBDCA", color: "#000", borderColor: "lightGray", justifyContent: "center",
+                    height: "40px",
+                    width: "80px",
+                    textAlign: "center",
+                    background: "#AEBDCA",
+                    color: "#000",
+                    borderColor: "lightGray",
+                    justifyContent: "center",
                   }} onClick={handleClickSave}>Save</Button>
                 </div>
               </Col>
