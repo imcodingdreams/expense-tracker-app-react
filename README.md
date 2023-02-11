@@ -6,7 +6,7 @@ A simple expense tracker to help keep track of the user's finances.
 
 Click [here](https://main--classy-vacherin-87e25a.netlify.app/) to see it live!
 
-![Image link](./images/expense-tracker-app-react-snip.png)
+![Image link](./src/images/expense-tracker-app-react-snip.png)
 
 ### SUMMARY
 In this project I use React and React Bootsrtrap to create a simple expense tracker app, where the user can add new expenses in a table. Each expense include the payment method, date, category, name and amount.
