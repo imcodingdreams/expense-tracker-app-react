@@ -9,7 +9,7 @@ Click [here](https://main--classy-vacherin-87e25a.netlify.app/) to see it live!
 ![Image link](./images/expense-tracker-app-react-snip.png)
 
 ### SUMMARY
-In this project I use React to create a simple expense tracker app, where the user can add new expenses in a table. Each expense include the payment method, date, category, name and amount.
+In this project I use React and React Bootsrtrap to create a simple expense tracker app, where the user can add new expenses in a table. Each expense include the payment method, date, category, name and amount.
 
 ### AUTHOR
 Nayka Vallejo - _Software Developer_
