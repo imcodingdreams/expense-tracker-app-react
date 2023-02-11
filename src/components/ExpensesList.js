@@ -8,7 +8,8 @@ export const ExpensesList = ({ expenses, handleClickDelete }) => {
         <Col lg={8}>
           <h4 style={{ textAlign: "left", marginTop: "40px", marginBottom: "50px" }}>Expenses List</h4>
           <Table bordered style={{
-            textAlign: "center"
+            textAlign: "center",
+            borderColor: "black"
           }}>
             <thead style={{ background: "#AEBDCA" }}>
               <tr>

@@ -26,7 +26,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               <Col xs={12} lg={4} className="col">
                 <InputGroup>
                   <FormControl
-                    className='mb-4'
+                    className='mb-lg-4 mb-md-3'
                     type="input"
                     ref={expenseNameRef}
                     name="expenseName"
@@ -36,7 +36,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               </Col>
               <Col xs={12} lg={4} className="col">
                 <FormControl
-                  className='mb-4'
+                  className='mb-lg-4 mb-md-3'
                   type="number"
                   ref={expenseAmountRef}
                   name="expenseAmount"
@@ -47,7 +47,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               </Col>
               <Col xs={12} lg={4} className="col">
                 <FormControl
-                  className='mb-4'
+                  className='mb-lg-4 mb-md-3'
                   controlid='form.Category'
                   as='select'
                   ref={expenseCategoryRef}
@@ -73,7 +73,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               </Col>
               <Col xs={12} lg={6} className="col">
                 <FormControl
-                  className='mb-4'
+                  className='mb-lg-4 mb-md-3'
                   controlid='form.PaymentMethod'
                   as='select'
                   ref={expensePaymentMethodRef}
@@ -88,7 +88,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
               </Col>
               <Col xs={12} lg={6} className="col">
                 <FormControl
-                  className='mb-5'
+                  className='mb-4'
                   type="date"
                   ref={expenseDateRef}
                   name="expenseDate"
@@ -99,13 +99,13 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
             <Row>
               <Col className="col">
                 <div className="d-flex justify-content-center">
-                  <Button style={{
+                  <Button  style={{
                     height: "40px",
                     width: "80px",
                     textAlign: "center",
                     background: "#AEBDCA",
                     color: "#000",
-                    borderColor: "lightGray",
+                    borderColor: "gray",
                     justifyContent: "center",
                   }} onClick={handleClickSave}>Save</Button>
                 </div>
