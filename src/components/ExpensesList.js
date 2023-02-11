@@ -9,7 +9,7 @@ export const ExpensesList = ({ expenses, handleClickDelete }) => {
           <h4 style={{ textAlign: "left", marginTop: "40px", marginBottom: "50px" }}>Expenses List</h4>
           <Table bordered style={{
             textAlign: "center",
-            borderColor: "black"
+            borderColor: "gray"
           }}>
             <thead style={{ background: "#AEBDCA" }}>
               <tr>

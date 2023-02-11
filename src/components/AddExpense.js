@@ -99,7 +99,7 @@ export const AddExpense = ({ handleClickSave, expenseNameRef, expenseAmountRef, 
             <Row>
               <Col className="col">
                 <div className="d-flex justify-content-center">
-                  <Button  style={{
+                  <Button style={{
                     height: "40px",
                     width: "80px",
                     textAlign: "center",
